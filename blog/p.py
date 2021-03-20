@@ -1,5 +1,6 @@
 import os, fnmatch
 from datetime import datetime
+#python3 p.py && python3 ../p.py
 
 post="<li><here></li>"
 mp="<body><here></body>"
@@ -19,7 +20,7 @@ for i in arr:
 m=list(chunks(tit,5))
 for i in m:
 	for i1 in i:
-		m[m.index(i)][i.index(i1)]=post.replace("<here>",i1)
+		m[m.index(i)][i.index(i1)]=post.replace("<here>",'<a href="https://p6l.github.io/blog/'+i1+'.html">'+i1+'</a>')
 full=''
 num=0
 for i in m:
