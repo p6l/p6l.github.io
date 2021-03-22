@@ -11,7 +11,7 @@ arr=fnmatch.filter(os.listdir('.'),'*.html')
 xml='<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><here></urlset>'
 k=''
 for i in arr:
-	k=k+'<url>'+i+'</url><lastmod>'+datetime.today().strftime('%Y-%m-%d')+'</lastmod>'
+	k=k+'<url><loc>'+i+'</loc><lastmod>'+datetime.today().strftime('%Y-%m-%d')+'</lastmod></url>'
 mmm=xml.replace('<here>',k)
 open('/home/a/Documents/seo/sitemap.xml','w').write(mmm)
 tit=[]
